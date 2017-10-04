@@ -83,12 +83,10 @@ void count_character_words(const std::string& filename,
 
 	// read contents of file if open
 	if (file.is_open()) {
-		//std::cout << "file is open" << std::endl;
 		std::string character = "";  // empty character to start
 
 		// line by line
 		while (std::getline(file, line)) {
-			//std::cout << "line: " << line << std::endl;
 			int idx = is_dialogue_line(line, character);
 			if (idx > 0 && !character.empty()) {
 
@@ -112,7 +110,6 @@ void count_character_words(const std::string& filename,
 		}
 		file.close();  // close file
 	}
-	std::cout << "end of count_character_words()" << std::endl;
 }
 
 /**
@@ -193,19 +190,11 @@ int main() {
 		}
 		threads.push_back(std::thread(count_character_words, filenames[i], std::ref(mutex), std::ref(wcounts)));
 	}
-	/*for (int i = 0; i < 4; ++i) {
-		threads.push_back(std::thread(count_character_words, filenames[i], std::ref(mutex), std::ref(wcounts)));
-	}
-	for (int j = 0; j < threads.size(); ++j) {
-		threads[j].join();
-	}*/
-
 	
 	auto sorted_wcounts = sort_characters_by_wordcount(wcounts);
 
 	// results
 	for (const auto& entry : sorted_wcounts) {
-		//std::cout << "print results" << std::endl;
 		std::cout << entry.first << ", " << entry.second << std::endl;
 	}
 	
