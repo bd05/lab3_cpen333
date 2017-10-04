@@ -72,7 +72,7 @@ void count_character_words(const std::string& filename,
 	std::mutex& mutex,
 	std::map<std::string, int>& wcounts) {
 
-	std::cout << "in count_character_words()" << std::endl;
+	//std::cout << "in count_character_words()" << std::endl;
 	std::cout << "filename: " << filename << std::endl;
 	//===============================================
 	//  IMPLEMENT THREAD SAFETY IN THIS METHOD
@@ -83,7 +83,7 @@ void count_character_words(const std::string& filename,
 
 	// read contents of file if open
 	if (file.is_open()) {
-		std::cout << "file is open" << std::endl;
+		//std::cout << "file is open" << std::endl;
 		std::string character = "";  // empty character to start
 
 		// line by line
@@ -93,19 +93,17 @@ void count_character_words(const std::string& filename,
 			if (idx > 0 && !character.empty()) {
 
 				int nwords = word_count(line, idx);
-
+				mutex.lock();
 				// add character if doesn't exist, otherwise increment count
 				if (wcounts.find(character) == wcounts.end()){ //not in map yet
 					wcounts.insert({character, 0});
 				}
-				/*else{ //character already in map
-					it->second += 1;
-				}*/
 				//=================================================
 				// YOUR JOB TO ADD WORD COUNT INFORMATION TO MAP
 				//=================================================
 				auto it = wcounts.find(character);
 				it->second += nwords;
+				mutex.unlock();
 			}
 			else {
 				character = "";  // reset character
@@ -158,6 +156,7 @@ std::vector<std::pair<std::string, int>> sort_characters_by_wordcount(
 	return out;
 }
 
+
 int main() {
 
 	// map and mutex for thread safety
@@ -183,8 +182,8 @@ int main() {
 	int nthreads = std::thread::hardware_concurrency(); // number of available cores
 	std::vector<std::thread> threads;
 	//ask prof what his tricks for dividing threads elegantly are
-	count_character_words("data/shakespeare_antony_cleopatra.txt", mutex, wcounts);
-	/*for (int i = 0; i < filenames.size(); ++i) {
+	//count_character_words("data/shakespeare_antony_cleopatra.txt", mutex, wcounts);
+	for (int i = 0; i < filenames.size(); ++i) {
 		if (i % nthreads == 0 && i != 0){
 			// wait for threads to finish before pushing more
 			for (int j = 0; j < threads.size(); ++j) {
@@ -192,12 +191,16 @@ int main() {
 			}
 			threads.clear();
 		}
-		threads.push_back(std::thread(count_character_words, filenames[i], mutex, wcounts));
+		threads.push_back(std::thread(count_character_words, filenames[i], std::ref(mutex), std::ref(wcounts)));
+	}
+	/*for (int i = 0; i < 4; ++i) {
+		threads.push_back(std::thread(count_character_words, filenames[i], std::ref(mutex), std::ref(wcounts)));
+	}
+	for (int j = 0; j < threads.size(); ++j) {
+		threads[j].join();
 	}*/
 
-
-
-
+	
 	auto sorted_wcounts = sort_characters_by_wordcount(wcounts);
 
 	// results
@@ -205,7 +208,7 @@ int main() {
 		//std::cout << "print results" << std::endl;
 		std::cout << entry.first << ", " << entry.second << std::endl;
 	}
-
+	
 	std::cout << std::endl << "Press ENTER to continue..." << std::endl;
 	std::cin.get();
 	return 0;
