@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A2F3B66B-6437-43FE-8757-6C7F7F9D592D}</ProjectGuid>
+    <RootNamespace>lab3_cpen333</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="word_count.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="shakespeare.cpp" />
+    <ClCompile Include="word_count.cpp" />
+    <ClCompile Include="word_count_test.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\copyright.txt" />
+    <Text Include="data\shakespeare_alls_well.txt" />
+    <Text Include="data\shakespeare_antony_cleopatra.txt" />
+    <Text Include="data\shakespeare_as_you_like_it.txt" />
+    <Text Include="data\shakespeare_comedy_of_errors.txt" />
+    <Text Include="data\shakespeare_coriolanus.txt" />
+    <Text Include="data\shakespeare_cymbeline.txt" />
+    <Text Include="data\shakespeare_gentlemen_of_verona.txt" />
+    <Text Include="data\shakespeare_hamlet.txt" />
+    <Text Include="data\shakespeare_julius_caesar.txt" />
+    <Text Include="data\shakespeare_king_henry_IV_first.txt" />
+    <Text Include="data\shakespeare_king_henry_IV_second.txt" />
+    <Text Include="data\shakespeare_king_henry_V.txt" />
+    <Text Include="data\shakespeare_king_henry_VIII.txt" />
+    <Text Include="data\shakespeare_king_henry_VI_first.txt" />
+    <Text Include="data\shakespeare_king_henry_VI_second.txt" />
+    <Text Include="data\shakespeare_king_henry_VI_third.txt" />
+    <Text Include="data\shakespeare_king_john.txt" />
+    <Text Include="data\shakespeare_king_lear.txt" />
+    <Text Include="data\shakespeare_king_richard_II.txt" />
+    <Text Include="data\shakespeare_king_richard_III.txt" />
+    <Text Include="data\shakespeare_lovers_complaint.txt" />
+    <Text Include="data\shakespeare_loves_labours_lost.txt" />
+    <Text Include="data\shakespeare_macbeth.txt" />
+    <Text Include="data\shakespeare_measure_for_measure.txt" />
+    <Text Include="data\shakespeare_merchant_of_venice.txt" />
+    <Text Include="data\shakespeare_midsummer_nights_dream.txt" />
+    <Text Include="data\shakespeare_much_ado.txt" />
+    <Text Include="data\shakespeare_othello.txt" />
+    <Text Include="data\shakespeare_romeo_and_juliet.txt" />
+    <Text Include="data\shakespeare_romeo_and_juliet_prologue.txt" />
+    <Text Include="data\shakespeare_sonnets.txt" />
+    <Text Include="data\shakespeare_taming_of_the_shrew.txt" />
+    <Text Include="data\shakespeare_tempest.txt" />
+    <Text Include="data\shakespeare_timon_of_athens.txt" />
+    <Text Include="data\shakespeare_titus_andronicus.txt" />
+    <Text Include="data\shakespeare_troilus_and_cressida.txt" />
+    <Text Include="data\shakespeare_twelfth_night.txt" />
+    <Text Include="data\shakespeare_winters_tale.txt" />
+    <Text Include="data\shakespeare_wives_of_windsor.txt" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

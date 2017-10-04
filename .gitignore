@@ -1,0 +1,6 @@
+#ignore debug folders
+/Debug
+/lab3_cpen333/Debug
+#ignore visual studio project file
+*.sdf
+*.opensdf

@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="data">
+      <UniqueIdentifier>{1f3fbfb6-3dca-4d3d-98e8-6e1a7465f829}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\data">
+      <UniqueIdentifier>{3c4f7b01-9484-4714-887d-c31f1212a144}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="word_count.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="word_count.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="word_count_test.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="shakespeare.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="data\copyright.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_alls_well.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_antony_cleopatra.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_as_you_like_it.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_comedy_of_errors.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_coriolanus.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_cymbeline.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_gentlemen_of_verona.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_hamlet.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_julius_caesar.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_IV_first.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_IV_second.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_V.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_VI_first.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_VI_second.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_VI_third.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_henry_VIII.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_john.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_lear.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_richard_II.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_king_richard_III.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_lovers_complaint.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_loves_labours_lost.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_macbeth.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_measure_for_measure.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_merchant_of_venice.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_midsummer_nights_dream.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_much_ado.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_othello.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_romeo_and_juliet.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_romeo_and_juliet_prologue.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_sonnets.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_taming_of_the_shrew.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_tempest.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_timon_of_athens.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_titus_andronicus.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_troilus_and_cressida.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_twelfth_night.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_winters_tale.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+    <Text Include="data\shakespeare_wives_of_windsor.txt">
+      <Filter>Source Files\data</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
