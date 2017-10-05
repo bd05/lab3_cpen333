@@ -5,6 +5,15 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "lab3_cpen333", "lab3_cpen333\lab3_cpen333.vcxproj", "{A2F3B66B-6437-43FE-8757-6C7F7F9D592D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "system_logger_parent", "part2\part2.vcxproj", "{CBE888D2-A367-4596-983F-4A4569590765}"
+	ProjectSection(ProjectDependencies) = postProject
+		{6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB} = {6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "system_logger_child", "system_logger_child\system_logger_child.vcxproj", "{6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "bin", "bin", "{683462B1-B0CA-4594-9657-4E05C7899F30}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +24,14 @@ Global
 		{A2F3B66B-6437-43FE-8757-6C7F7F9D592D}.Debug|Win32.Build.0 = Debug|Win32
 		{A2F3B66B-6437-43FE-8757-6C7F7F9D592D}.Release|Win32.ActiveCfg = Release|Win32
 		{A2F3B66B-6437-43FE-8757-6C7F7F9D592D}.Release|Win32.Build.0 = Release|Win32
+		{CBE888D2-A367-4596-983F-4A4569590765}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CBE888D2-A367-4596-983F-4A4569590765}.Debug|Win32.Build.0 = Debug|Win32
+		{CBE888D2-A367-4596-983F-4A4569590765}.Release|Win32.ActiveCfg = Release|Win32
+		{CBE888D2-A367-4596-983F-4A4569590765}.Release|Win32.Build.0 = Release|Win32
+		{6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB}.Debug|Win32.Build.0 = Debug|Win32
+		{6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB}.Release|Win32.ActiveCfg = Release|Win32
+		{6B7467F7-7C7E-4ACF-A102-79EAAFA8A5EB}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

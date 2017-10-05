@@ -92,6 +92,7 @@ void count_character_words(const std::string& filename,
 
 				int nwords = word_count(line, idx);
 				mutex.lock();
+				//std::lock_guard<std::mutex> lock(mutex);
 				// add character if doesn't exist, otherwise increment count
 				if (wcounts.find(character) == wcounts.end()){ //not in map yet
 					wcounts.insert({character, 0});
@@ -194,10 +195,12 @@ int main() {
 	auto sorted_wcounts = sort_characters_by_wordcount(wcounts);
 
 	// results
+	int numCharacters = 0;
 	for (const auto& entry : sorted_wcounts) {
 		std::cout << entry.first << ", " << entry.second << std::endl;
+		numCharacters++;
 	}
-	
+	std::cout << "number of characters: " << numCharacters << std::endl;
 	std::cout << std::endl << "Press ENTER to continue..." << std::endl;
 	std::cin.get();
 	return 0;
