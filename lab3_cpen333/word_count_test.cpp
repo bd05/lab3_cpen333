@@ -54,8 +54,8 @@ void wc_tester(const std::string& line, int start_idx, int expected) {
 	}
 
 }
-
-/*int main() {
+/*
+int main() {
 
 	try {
 
@@ -63,11 +63,13 @@ void wc_tester(const std::string& line, int start_idx, int expected) {
 		wc_tester("hello world", 0, 2);
 		wc_tester("  this is a word", 0, 4);
 		wc_tester("one", 0, 1);
+		wc_tester("      ", 0, 0);
+		wc_tester("end space   ", 0, 2);
 
 	}
 	catch (UnitTestException &ute) {
 		std::cout << ute.info() << std::endl;
 	}
 
-	//return 0;
+	return 0;
 }*/
